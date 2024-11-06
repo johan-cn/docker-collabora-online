@@ -1,6 +1,6 @@
 services:
   collabora-online-app:
-    image: tiredofit/collabora-online
+    image: tiredofit/collabora-online:24.04.9-2
     container_name: collabora-online-app
     hostname: code.lebardaun.com
     cap_add:
@@ -17,17 +17,16 @@ services:
       - ADMIN_USER=admin
       - ADMIN_PASS=cT3rxxxxxxxx
 
-      - ALLOWED_HOSTS=nextcloud.lebardaun.com,code.lebardaun.com
+      - ALLOWED_HOSTS=https://nextcloud.lebardaun.com
 
       - ENABLE_TLS=FALSE
       - ENABLE_TLS_REVERSE_PROXY=TRUE
 
       - INTERFACE=notebookbar
       - LOG_TYPE=FILE
+    restart: always
     networks:
       - bridge
-    restart: always
-
 networks:
   bridge:
     external: true

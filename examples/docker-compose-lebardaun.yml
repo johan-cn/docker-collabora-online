@@ -11,11 +11,11 @@ services:
     volumes:
       - ./logs:/logs
     environment:
-      - TIMEZONE=America/Vancouver
+      - TIMEZONE=Asia/Jakarta
       - CONTAINER_NAME=collabora-online-app
 
       - ADMIN_USER=admin
-      - ADMIN_PASS=cT3r53r4hl4h?!?/
+      - ADMIN_PASS=cT3rxxxxxxxx
 
       - ALLOWED_HOSTS=nextcloud.lebardaun.com,code.lebardaun.com
 
